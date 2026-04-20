@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">gsb-visites</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_title">GSB Visites</string>
+    <string name="hint_login">Identifiant</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="btn_login">Se connecter</string>
+</resources>
