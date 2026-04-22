@@ -34,14 +34,6 @@ android {
 }
 
 dependencies {
-
-    implementation libs.appcompat
-    implementation libs.material
-    implementation libs.annotation
-    implementation libs.constraintlayout
-    implementation libs.lifecycle.livedata.ktx
-    implementation libs.lifecycle.viewmodel.ktx
-    dependencies {
         implementation libs.appcompat
         implementation libs.material
         implementation libs.activity
@@ -66,6 +58,4 @@ dependencies {
 
         implementation 'androidx.lifecycle:lifecycle-livedata:2.8.6'
         implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.6'
-    }
-
 }
