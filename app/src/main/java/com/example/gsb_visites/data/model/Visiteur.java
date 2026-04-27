@@ -1,12 +1,17 @@
 package com.example.gsb_visites.data.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Visiteur implements Serializable {
 
+    @SerializedName("email")
     private String email;
+    @SerializedName("password")
     private String mdp;
     private String token;
+
 
     public Visiteur(String email, String mdp) {
         this.email = email;

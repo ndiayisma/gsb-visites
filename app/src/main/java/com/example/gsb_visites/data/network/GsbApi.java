@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface GsbApi {
-    @POST("connexion")
+    @POST("/api/visiteurs/connexion")
     Call<Visiteur> login(@Body Visiteur visiteur);
 }

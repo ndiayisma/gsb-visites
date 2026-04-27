@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class RetrofitClientInstance {
     private static Retrofit retrofit;
-    private static final String BASE_URL = "url";
+    private static final String BASE_URL = "https://effective-train-pj6p66w6wx52r954-3000.app.github.dev";
 
     private RetrofitClientInstance() {}
 

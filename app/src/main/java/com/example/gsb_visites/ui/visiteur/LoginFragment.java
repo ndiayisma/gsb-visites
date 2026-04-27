@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.gsb_visites.R;
+import com.example.gsb_visites.data.model.Visiteur;
 import com.example.gsb_visites.databinding.FragmentLoginBinding;
 import com.example.gsb_visites.viewmodel.VisiteurViewModel;
 
@@ -44,15 +45,20 @@ public class LoginFragment extends Fragment {
             String password = binding.etPassword.getText().toString().trim();
 
             visiteurViewModel.login(email, password).observe(getViewLifecycleOwner(), success -> {
+
                 if (success) {
-                    String token = visiteurViewModel.getVisiteur().getValue().getToken();
-                    Toast.makeText(getContext(), "Connecté ! Token : " + token, Toast.LENGTH_SHORT).show();
-                    NavDirections action = LoginFragmentDirections.actionLoginFragmentToHomeVisiteurFragment();
-                    NavHostFragment.findNavController(LoginFragment.this).navigate(action);
+                    Visiteur visiteur = visiteurViewModel.getVisiteur().getValue();
+                    if (visiteur != null) {
+                        String token = visiteur.getToken();
+                        Toast.makeText(getContext(), "Connecté ! Token : " + token, Toast.LENGTH_SHORT).show();
+                        NavDirections action = LoginFragmentDirections.actionLoginFragmentToHomeVisiteurFragment();
+                        NavHostFragment.findNavController(LoginFragment.this).navigate(action);
+                    }
                 } else {
                     Toast.makeText(getContext(), "Identifiants invalides", Toast.LENGTH_SHORT).show();
                 }
             });
+
         });
     }
 }
