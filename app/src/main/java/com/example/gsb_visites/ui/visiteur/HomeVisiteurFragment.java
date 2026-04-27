@@ -37,7 +37,7 @@ public class HomeVisiteurFragment extends Fragment {
         visiteurViewModel = new ViewModelProvider(requireActivity()).get(VisiteurViewModel.class);
         visiteurViewModel.getVisiteur().observe(getViewLifecycleOwner(), visiteur -> {
             if (visiteur != null) {
-                binding.tvBonjour.setText("Bonjour " + visiteur.getEmail());
+                binding.tvBonjour.setText("Bonjour " + visiteur.getNom());
             }
         });
     }
