@@ -24,5 +24,10 @@ public interface GsbApi {
     @GET("api/praticiens")
     Call<List<Praticien>> getAllPraticiens();
 
+    @GET("api/visiteurs/{id}/portefeuille")
+    Call <List<Visiteur>> getPraticiensByVisiteurId(
+            @retrofit2.http.Path("id") String visiteurId,
+            @retrofit2.http.Header("Authorization") String token);
+
 
 }
