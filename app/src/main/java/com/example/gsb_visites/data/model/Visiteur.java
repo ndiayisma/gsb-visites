@@ -14,6 +14,7 @@ public class Visiteur implements Serializable {
     private String email;
     @SerializedName("password")
     private String mdp;
+    @SerializedName("token")
     private String token;
 
 
