@@ -3,9 +3,12 @@ package com.example.gsb_visites.data.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Visiteur implements Serializable {
 
+    @SerializedName("_id")
+    private String id;
     @SerializedName("nom")
     private String nom;
     @SerializedName("prenom")
@@ -16,6 +19,8 @@ public class Visiteur implements Serializable {
     private String mdp;
     @SerializedName("token")
     private String token;
+    private ArrayList<Praticien> praticiens;
+
 
 
     public Visiteur(String email, String mdp) {
@@ -50,5 +55,10 @@ public class Visiteur implements Serializable {
     public void setToken(String token) {
         this.token = token;
     }
+
+    public String getId() { return id; }
+
+    public void setId(String id) { this.id = id; }
+
 
 }

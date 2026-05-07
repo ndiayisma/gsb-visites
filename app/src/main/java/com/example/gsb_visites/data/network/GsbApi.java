@@ -2,12 +2,15 @@ package com.example.gsb_visites.data.network;
 
 
 import com.example.gsb_visites.data.model.Praticien;
+import com.example.gsb_visites.data.model.Portefeuille;
 import com.example.gsb_visites.data.model.Visiteur;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Header;
+import retrofit2.http.Path;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -25,9 +28,8 @@ public interface GsbApi {
     Call<List<Praticien>> getAllPraticiens();
 
     @GET("api/visiteurs/{id}/portefeuille")
-    Call <List<Visiteur>> getPraticiensByVisiteurId(
-            @retrofit2.http.Path("id") String visiteurId,
-            @retrofit2.http.Header("Authorization") String token);
+    Call<List<Portefeuille>> getPraticiensByVisiteurId(@Path("id") String visiteurId, @Header("Authorization") String token
+    );
 
 
 }

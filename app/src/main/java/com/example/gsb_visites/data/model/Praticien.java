@@ -2,7 +2,9 @@ package com.example.gsb_visites.data.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Praticien {
+import java.io.Serializable;
+
+public class Praticien implements Serializable {
     @SerializedName("nom")
     private String nom;
     @SerializedName("prenom")
