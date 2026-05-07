@@ -17,6 +17,8 @@ public class Praticien implements Serializable {
     private String codePostal;
     @SerializedName("ville")
     private String ville;
+    @SerializedName("specialite")
+    private String specialite;
 
     public Praticien(String nom, String prenom, String email, String rue, String codePostal, String ville) {
         this.nom = nom;

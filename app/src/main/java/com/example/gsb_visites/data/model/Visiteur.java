@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Visiteur implements Serializable {
 
-    @SerializedName("_id")
+    @SerializedName("id")
     private String id;
     @SerializedName("nom")
     private String nom;
