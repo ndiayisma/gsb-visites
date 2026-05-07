@@ -23,7 +23,7 @@ Dans le cadre d'un projet de développement débutant de Novembre 2025 à Avril 
 - Android Studio (utilisé pour le développement mobile) : https://developer.android.com/studio?hl=fr
 - Postman (pour récupérer les APIs et les données)
 - ExpressJS **(afin de le connecter à l'API)**  : https://nodejs.org/en/download (à le télecharger)
-- SQLite (intégré de base à Android Studio
+- SQLite (intégré de base à Android Studio)
 
 ## 📱Architecture d'Android Studios
 Activities : chaque écran principal correspond à une Activity
@@ -43,8 +43,20 @@ Exemple :
 
 ## 📂Arborescence de l'application
 
-- **Modèle** : Ici, les classes tels que Visiteur et Praticiens seront dispo
-- **API** : Grâce à cela, nous utiliserons des appels API afin de récupérer les données essentiels pour une Activity
+## 🗃️Arborescence utilisé
+```
+app
+├── src
+    ├── main
+        ├── data
+        ├── ui
+        ├── viewmodel
+    ├── res
+        ├── drawable
+        ├── layout
+            ├── fragment_home_visiteur.xml
+templates/
+```
 
 ## GSB en Backend/Gerer les API et en faire des appels
 Etant lié au répositoire qui permet de gérer les API et classe en TS, cette application a la capacité de récupérer les données API et d'enregistrer la base de Données via un Cluster de MongoDB
